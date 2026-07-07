@@ -8,7 +8,7 @@ Built with Python, scikit-learn, VADER, and Streamlit.
 
 Type any sentence and see how both approaches classify it, view the dataset's sentiment distribution, and compare model accuracy.
 
-*(Add a screenshot here once you've run the app — save it as `Assets/demo.png` and it will show up.)*
+![Twitter Sentiment Analysis app](Assets/demo.png)
 
 ## What it does
 
@@ -26,6 +26,8 @@ Measured on a held-out test set of 2,928 tweets the models never saw during trai
 | TF-IDF + Logistic Regression | ~75% | Learns sentiment patterns from the training tweets |
 
 The trained model improves on the baseline by about **19 percentage points**. It learns from the data that words like *delayed* and *cancelled* are strongly negative in an airline context — something the rule-based analyzer cannot infer on its own. Negative tweets are classified most accurately; neutral tweets are the hardest, since they carry the weakest signal.
+
+![Baseline vs trained model results](Assets/demo1.png)
 
 ## Dataset
 
@@ -89,3 +91,4 @@ Python, scikit-learn (TF-IDF, Logistic Regression), vaderSentiment, pandas, matp
 - Neutral tweets are the hardest to classify; more training data or a stronger model (e.g. a transformer) would help.
 - The dataset is from 2015 and airline-specific, so the model reflects that domain.
 - Possible extensions: try other classifiers, add cross-validation, or fine-tune a small transformer model for higher accuracy.
+
